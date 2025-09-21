@@ -1,0 +1,77 @@
+/* CreateAuditoriumPage.css */
+
+.create-auditorium-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-auditorium-container .header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-auditorium-container .header h1 {
+  color: #333;
+}
+
+.create-auditorium-container .header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.create-auditorium-container .form-container {
+  flex-direction: column;
+}
+
+.create-auditorium-container .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.create-auditorium-container .form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.create-auditorium-container label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.create-auditorium-container input,
+.create-auditorium-container select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.create-auditorium-container .auditorium-type-options {
+  display: flex;
+  gap: 120px; /* Adjust the gap as needed */
+}
+
+.create-auditorium-container .auditorium-type-options label {
+  display: flex;
+  align-items: center;
+}
+
+.create-auditorium-container button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.create-auditorium-container button:hover {
+  background-color: #006a17;
+  align-items: center;
+}
