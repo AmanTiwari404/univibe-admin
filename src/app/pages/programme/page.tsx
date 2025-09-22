@@ -45,22 +45,28 @@ const CreateProgrammePage = () => {
 
   const handleThemeChange = (theme: string) => {
     if (programme.themes.includes(theme)) {
-      setProgramme({
-        ...programme,
-        themes: programme.themes.filter(
+      setProgramme(prev => ({
+        ...prev,
+        themes: prev.themes.filter(
           (selectedTheme) => selectedTheme !== theme
         ),
-      });
+      }));
     } else {
-      setProgramme({ ...programme, themes: [...programme.themes, theme] });
+      setProgramme(prev => ({ 
+        ...prev, 
+        themes: [...prev.themes, theme] 
+      }));
     }
   };
 
   const handleInputChange = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;
-    setProgramme({ ...programme, [name]: value });
+    setProgramme(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   const uploadImage = async (image: File) => {
@@ -189,10 +195,10 @@ const CreateProgrammePage = () => {
             accept="image/*"
             onChange={(event) => {
               if (event.target.files && event.target.files.length > 0) {
-                setProgramme({
-                  ...programme,
+                setProgramme(prev => ({
+                  ...prev,
                   portraitImg: event.target.files[0],
-                });
+                }));
               }
             }}
           />
@@ -204,10 +210,10 @@ const CreateProgrammePage = () => {
             accept="image/*"
             onChange={(event) => {
               if (event.target.files && event.target.files.length > 0) {
-                setProgramme({
-                  ...programme,
+                setProgramme(prev => ({
+                  ...prev,
                   landscapeImg: event.target.files[0],
-                });
+                }));
               }
             }}
           />
