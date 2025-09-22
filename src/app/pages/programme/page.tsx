@@ -194,10 +194,11 @@ const CreateProgrammePage = () => {
             type="file"
             accept="image/*"
             onChange={(event) => {
-              if (event.target.files && event.target.files.length > 0) {
+              const files = event.target.files;
+              if (files && files.length > 0) {
                 setProgramme(prev => ({
                   ...prev,
-                  portraitImg: event.target.files[0],
+                  portraitImg: files[0],
                 }));
               }
             }}
@@ -209,10 +210,11 @@ const CreateProgrammePage = () => {
             type="file"
             accept="image/*"
             onChange={(event) => {
-              if (event.target.files && event.target.files.length > 0) {
+              const files = event.target.files;
+              if (files && files.length > 0) {
                 setProgramme(prev => ({
                   ...prev,
-                  landscapeImg: event.target.files[0],
+                  landscapeImg: files[0],
                 }));
               }
             }}
