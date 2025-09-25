@@ -26,7 +26,7 @@ const SigninPage = () => {
         toast.success('Admin Login Successful', {
           position: toast.POSITION.TOP_CENTER,
         });
-        window.location.href = 'https://univibes-admin-dashboard.netlify.app/';
+        window.location.href = 'https://bucolic-seahorse-7999bc.netlify.app/';
       } else {
         console.error('Admin login failed', response.statusText);
         toast.error('Admin Login Failed', {
