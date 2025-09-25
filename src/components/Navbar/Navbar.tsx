@@ -44,20 +44,14 @@ const Navbar = () => {
             </Link>
 
             <div className='adminlinks'>
-                {isAdminAuthenticated ? (
+                { (
                     <>
                         {/* Show links for authenticated admin */}
                         <Link href='/pages/programme'>Add Programme</Link>
                         <Link href='/pages/auditorium/createauditorium'>Add Auditorium</Link>
                         <Link href='/pages/schedule'>Add Schedule</Link>
                     </>
-                ) : (
-                    <>
-                        {/* Show login/signup links for unauthenticated admin */}
-                        <Link href='/pages/auth/signin'>Login</Link>
-                        <Link href='/pages/auth/signup'>Signup</Link>
-                    </>
-                )}
+                ) }
             </div>
         </div>
     );
